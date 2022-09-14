@@ -16,5 +16,4 @@ mongoClient.connect().then(() => {
     db = mongoClient.db('drivenmugs');
 });
 
-
-server.listen(5000, () => {console.log('Servidor rodando na porta 5000')}) 
+server.listen(5000, () => {console.log('Servidor rodando na porta 5000')});
