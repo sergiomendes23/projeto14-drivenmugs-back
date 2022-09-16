@@ -2,7 +2,7 @@ import bcrypt from 'bcrypt';
 import { db } from '../mongo.js';
 
 const signUp = async (req, res) => {
-  const {name, email, password} = req.body;
+  const {name, email, password} = req.locals;
     try {
       const hash = bcrypt.hashSync(password, 10);
       const validEmail = await db.collection('users').findOne({email});

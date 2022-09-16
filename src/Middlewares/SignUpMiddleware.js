@@ -14,8 +14,10 @@ const validateSignUp = async (req, res, next) => {
       email: sanitize(req.body.email),
       password: req.body.password
     }
-    req.body = user;
+    
+    req.locals = user;
     next();
+
   } catch (error) {
     res.status(500);
   }
