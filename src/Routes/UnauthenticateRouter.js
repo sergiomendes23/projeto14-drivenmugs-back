@@ -7,6 +7,8 @@ router.get("/", getHomePage);
 
 router.get("/cart", getChart);
 
+export default router;
+
 /* 
 db.mugs.insertOne({
 id: 0,
