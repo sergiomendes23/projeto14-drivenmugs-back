@@ -4,7 +4,7 @@ async function getHomePage(res) {
 	console.log("parece veridico");
 
 	try {
-		const Allproducts = await db.products.find().toArray();
+		const Allproducts = await db.collecion("products").find().toArray();
 
 		res.send(Allproducts);
 	} catch (error) {
