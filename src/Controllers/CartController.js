@@ -1,6 +1,6 @@
 import { db } from "../mongo";
 
-async function getChart(res) {
+async function getCart(res) {
 	console.log("maybe this work");
 
 	try {
@@ -38,4 +38,4 @@ async function addCart(req, res) {
 		console.error("Error: " + error.message);
 	}
 }
-export default getChart;
+export default getCart;

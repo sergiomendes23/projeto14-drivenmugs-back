@@ -5,10 +5,11 @@ import signIn from '../Controllers/SignInController.js';
 import validateSignIn from '../Middlewares/SignInMiddleware.js';
 import addCart from '../Controllers/AddCartController.js';
 import validateToken from '../Middlewares/AuthMiddleware.js';
+import Checkout from '../Controllers/CheckoutController.js';
 
 const router = Router();
 router.post('/cadastro', validateSignUp, signUp);
 router.post('/login', validateSignIn, signIn);
-router.get('/cart', validateToken, addCart);
+router.get('/cart', validateToken, Checkout);
 
 export default router;
