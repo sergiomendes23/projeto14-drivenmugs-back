@@ -1,4 +1,4 @@
-import { db } from '../mongo.js';
+import db from '../mongo.js';
 
 const validateToken = async (req, res, next) => {
 

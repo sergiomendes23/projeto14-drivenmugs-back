@@ -1,4 +1,4 @@
-import { db } from "../mongo";
+import db from "../mongo";
 
 async function addCart(req, res) {
 	console.log("Im alive bicth");

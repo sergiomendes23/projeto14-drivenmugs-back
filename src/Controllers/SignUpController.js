@@ -1,5 +1,5 @@
 import bcrypt from 'bcrypt';
-import { db } from '../mongo.js';
+import db from '../mongo.js';
 
 const signUp = async (req, res) => {
   const {name, email, password} = req.locals;

@@ -1,4 +1,4 @@
-import { db } from '../mongo.js';
+import db from '../mongo.js';
 
 const listMugs = async (req, res) => {
   try {

@@ -1,6 +1,6 @@
 import { loginSchema } from "../schema.js";
 import sanitize from "../sanitize.js";
-import { db } from "../mongo.js";
+import db from "../mongo.js";
 import bcrypt from "bcrypt";
 
 const validateSignIn = async (req, res, next) => {

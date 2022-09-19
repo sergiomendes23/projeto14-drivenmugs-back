@@ -1,4 +1,4 @@
-import { db } from "../mongo";
+import db from "../mongo";
 
 async function getHomePage(res) {
 	console.log("parece veridico");

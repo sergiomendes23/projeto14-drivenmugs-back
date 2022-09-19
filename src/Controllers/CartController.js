@@ -1,4 +1,4 @@
-import { db } from "../mongo";
+import db from "../mongo";
 
 async function getChart(res) {
 	console.log("maybe this work");

@@ -1,5 +1,5 @@
 import { v4 as uuid } from 'uuid';
-import { db } from '../mongo.js';
+import db from '../mongo.js';
 
 const signIn = async (req, res) => {
   const {_id, name, userLogin} = res.locals;
