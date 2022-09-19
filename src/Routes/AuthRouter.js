@@ -4,13 +4,11 @@ import validateSignUp from '../Middlewares/SignUpMiddleware.js';
 import signIn from '../Controllers/SignInController.js';
 import validateSignIn from '../Middlewares/SignInMiddleware.js';
 import addCart from '../Controllers/AddCartController.js';
+import validateToken from '../Middlewares/AuthMiddleware.js';
 
 const router = Router();
 router.post('/cadastro', validateSignUp, signUp);
 router.post('/login', validateSignIn, signIn);
-router.get('/cart', addCart
-  //TODO implement token validation controller here
-
-)
+router.get('/cart', validateToken, addCart);
 
 export default router;
