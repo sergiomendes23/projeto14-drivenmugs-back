@@ -1,23 +1,11 @@
 import { Router } from "express";
-import { db } from "../mongo.js";
-
+import getChart from "../Controllers/CartController.js";
+import getHomePage from "../Controllers/HomePageControlle.js";
 const router = Router();
 
-router.get("/", async function getHomePage(req, res) {
-	console.info("parece veridico");
+router.get("/", getHomePage);
 
-	try {
-		const Allproducts = await db.allProducts.find().toArray();
-
-		res.send(Allproducts);
-	} catch (error) {
-		console.error("Error: " + error.message);
-	}
-});
-
-router.get("/cart", async function chart(req, res) {
-	console.info("maybe this work");
-});
+router.get("/cart", getChart);
 
 /* 
 db.mugs.insertOne({
