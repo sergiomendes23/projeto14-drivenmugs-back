@@ -1,4 +1,4 @@
-import { db } from "../mongo";
+import db from "../mongo";
 
 async function getCart(res) {
 	console.log("maybe this work");
